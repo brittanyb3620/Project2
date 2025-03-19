@@ -1,0 +1,642 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+/* CHATGPT how do I make my nav bar sticky? */
+nav {
+        position: sticky;
+        top: 0;
+        background-color: #522c2c;
+        padding: 1rem;
+        z-index: 1000;
+        width: 100%
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: .75rem;
+    font-weight: bold;
+    font-family: 'Aboreto', cursive;
+    color:white;
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Aboreto', cursive;
+}
+/*CHATGPT What does css look like typically for a dropdown menu?*/
+.nav-links .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/*Dropdown menu*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%; 
+    left: 0;
+    font-family: inherit;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Hover effect for dropdown links */
+.dropdown-content a:hover {
+    background-color: #f5f5f5;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Gallery Section */
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 75vw;
+    border:solid red;
+    }
+    .div1 { grid-area: 1 / 1 / 5 / 4; 
+    display: flex;
+    place-items: center;
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden;
+    border-style:solid; 
+    border-color:#0181CB;
+    }
+    .div1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        }
+    .div2 { grid-area: 1 / 4 / 3 / 5; 
+        display: flex;
+        place-items: center;
+        width: 100%; 
+        height: 100%; 
+        overflow: hidden;
+        border-style:solid; 
+        border-color:#0181CB;}
+    .div2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+            }
+    .div3 { grid-area: 1 / 5 / 3 / 6;
+        display: flex;
+        place-items: center;
+        width: 100%; 
+        height: 100%; 
+        overflow: hidden;
+        border-style:solid; 
+        border-color:#0181CB; }
+
+    .div3 img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+                }
+    .div4 { grid-area: 3 / 4 / 5 / 5; 
+        display: flex;
+        place-items: center;
+        width: 100%; 
+        height: 100%; 
+        overflow: hidden;
+        border-style:solid; 
+        border-color:#0181CB;}
+        .div4 img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+                    }
+    .div5 { grid-area: 3 / 5 / 5 / 6; 
+        display: flex;
+        place-items: center;
+        width: 100%; 
+        height: 100%; 
+        overflow: hidden;
+        border-style:solid; 
+        border-color:#0181CB;}
+        .div5 img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+                    }
+    .div6 { grid-area: 5 / 1 / 6 / 4; 
+        display: flex;
+        place-items: center;
+        width: 100%; 
+        height: 100%; 
+        overflow: hidden;
+        border-style:solid; 
+        border-color:#0181CB;}
+    .div7 { grid-area: 6 / 1 / 7 / 4; 
+        display: flex;
+        place-items: center;
+        width: 100%; 
+        height: 100%; 
+        overflow: hidden;
+        border-style:solid; 
+        border-color:#0181CB;}
+    .div8 { grid-area: 5 / 4 / 7 / 6;
+        display: flex;
+        place-items: center;
+        width: 100%; 
+        height: 100%; 
+        overflow: hidden;
+        border-style:solid; 
+        border-color:#0181CB; }
+
+/* Main Image */
+
+
+/* REVIEW AND CALENDAR SECTION */
+/* Container for review and for the calendar widget */
+.hodnotenie-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    margin-right:330px;
+    display: flex;
+    justify-content: space-between;    
+    gap: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background: white;
+    flex-wrap: wrap; 
+    align-items: center;
+    text-align: center;
+
+}
+
+/* REVIEW CONTAINER */
+.review-container {
+    flex: 1;
+    align-self:flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: Arial, sans-serif;
+    min-width: 300px;
+    border-style:solid;
+    border: 1px solid #f5f5f5;
+    border-radius:10px;
+    padding:10px;
+
+}
+
+.review-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Adds spacing between the icons and text */
+    font-size: 18px;
+    font-weight: bold;
+}
+.review-badge i {
+    font-size: 30px; /* Adjust icon size */
+    color: #2A646E; /* Airbnb-style red */
+}
+.review-text {
+    font-size: 16px;
+    color: #333;
+    font-family: inherit;
+}
+
+.review-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.review-score {
+    font-size: 22px;
+}
+
+.review-stars {
+    color: gold; 
+}
+
+.review-divider {
+    width: 1px;
+    height: 20px;
+    background-color: #f5f5f5;
+}
+
+.review-count a {
+    color: black;
+}
+
+.review-count a:hover {
+    text-decoration: underline;
+}
+/* Styling for the "Zanechaj hodnotenie" link */
+.rating-button {
+    font-size 16px;
+    color: #522c2c;
+    text-decoration: underline; 
+    cursor: pointer; 
+    font-family: inherit;
+}
+
+/* Hover effect */
+.rating-button:hover {
+    text-decoration: none;
+    color: #5c0000;
+}
+
+/* AVAILABILITY WIDGET */
+/* CHATGPT how do I fit this widgit in the same container as the review?  */
+.availability-widget {
+    flex: 1; /* Makes it share space with the review container */
+    min-width: 320px; /* Prevents it from getting too small */
+    max-width: 400px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #f5f5f5;
+    text-align: center;
+    font-family: inherit;
+}
+
+.availability-widget h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.availability-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/* CHATGPT what are all the css styles I need to include for styling the calendar widgit? */
+.date-selection {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.date-field {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex: 1;
+}
+
+.date-field label {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.date-field input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+}
+
+.guests-selection {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.guests-selection label {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.guests-selection select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #7b4d4d;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #7b4d4d;
+}
+
+/* Other Penzion Options Section*/
+
+.bg-light {
+	background-color: #f5f5f5;
+}
+
+.section-header {
+	text-align: center;
+}
+
+.section-header h2 {
+	font-size: 2rem;
+	color: #2A646E;
+	margin-bottom: 0.5rem;
+    margin-top: 3rem;
+}
+
+
+/* Different Options Cards*/
+
+ .section {
+    width: 100vw;
+    max-width: 100%;
+    padding: 0;
+}
+
+/* Make the container full width */
+.container-for-cards{
+    width: 100vw;
+    max-width: 100%;
+    padding: 0;
+    width: 100vw;
+}
+/* CHATGPT how do I make the cards scroll with a cursor on my website screen horizontally?*/
+.bnb-cards {
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Enables smooth snapping */
+    gap: 3rem;
+    padding: 3rem;
+    width: 100%;
+    white-space: nowrap; /* Prevents wrapping to a new row */
+}
+
+
+.bnb-cards::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in Chrome, Safari */
+
+}
+
+.bnb-cards {
+    -ms-overflow-style: none; /* Hides scrollbar in IE, Edge */
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+
+/* CHATGPT the cards aren't fitting in the container. How do I modify them so they fit?*/
+.card-content {
+        max-width: 100%; /* Prevents content from overflowing */
+        word-wrap: break-word; /* Ensures long words wrap properly */
+        overflow: hidden; /* Hides any extra content that might overflow */
+    }
+    
+/* Ensure the card itself does not expand beyond its limits */
+    .card {
+        flex: 0 0 auto;
+        width: 300px;
+        max-width: 100%;
+        white-space: normal;
+    }
+
+/* Ensure images inside cards don't stretch */
+.card-image {
+    height: 200px;
+    background-color: #666;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Button on the cards layout */
+.card-button-layout {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+    padding-top: 1rem;
+}
+.card-button-layout .btn {
+    background-color: #2A646E; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Small adjustments for responsiveness */
+@media (min-width: 768px) {
+    .bnb-cards {
+        overflow-x: auto; /* Keep scrolling effect on wider screens */
+    }
+
+    .card {
+        flex: 0 0 300px; /* Ensures fixed width for proper scrolling */
+    }
+}
+
+/* Rating Form Container */
+#rating-form {
+    background: #f5f5f5;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: inherit;
+}
+
+/* Form Title */
+#rating-form h2 {
+    text-align: center;
+    color: #522c2c;
+    margin-bottom: 20px;
+    font-family: inherit;
+}
+
+/* Labels */
+#rating-form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #522c2c;
+    font-family: inherit;
+}
+
+/* Dropdown (Star Rating) */
+#rating-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Sliders */
+#rating-form input[type="range"] {
+    width: 100%;
+    margin-top: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+/*CHATGPT how do I style the textarea?*/
+#rating-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    resize: vertical; /* Allows resizing up/down */
+}
+
+/* Submit Button */
+#rating-form button {
+    background-color: #522c2c;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+
+/* Footer */
+footer {
+	background-color: #522c2c;
+	color: white;
+	padding: 2rem 0 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    }
+    
+.footer-container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footer-section {
+	margin-bottom: 2rem;
+}
+.footer-section .logo{
+    justify-content:center;
+}
+.footer-section .logo img {
+    width: 60px; 
+    height: auto; 
+}
+
+.footer-links h3 {
+	font-size: 1.2rem;
+	margin-bottom: 1rem;
+    font-family: inherit;
+}
+
+.social-placeholder {
+	display: flex;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.social-icon {
+	width: 30px;
+	height: 30px;
+	background-color: #666;
+	border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.footer-bottom {
+	border-top: 1px solid #555;
+	margin-top: 2rem;
+	padding-top: 1.5rem;
+	text-align: center;
+	font-size: 0.875rem;
+	color: #aaa;
+}
+
+.footer-bottom a {
+	color: #aaa;
+	text-decoration: none;
+	margin: 0 0.5rem;
+}
