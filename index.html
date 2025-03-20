@@ -40,8 +40,12 @@
         </div>
     </nav>
     
+<!-- Title of This specific penzion -->
+<div class="header-container">
+    <h1>Penzión Pod Mývalom</h1>
+</div>
+    <!-- Grid Section -->
 
-    <!-- Gallery Section -->
     <div class="parent">
         <div class="div1">
                 <img src="./house-on-lake2.tiff" alt="Cabin next to a lake">
@@ -62,8 +66,6 @@
             </div>
         </div>
         <div class="div7">
-            <div class="hodnotenie-container">
-                <div class="review-container">
                     <div class="review-badge">
                         <i class="mdi mdi-flower-outline"></i>
                         <h2>Obľúbené medzi hosťami</h2>
@@ -78,44 +80,42 @@
                         <a href="#rating-form" class="rating-button">Zanechaj hodnotenie</a>
             
                     </div>
-                </div> </div>
-        <div class="div8"><div class="availability-widget">
-            <h2>Pridajte dátumy a uvidíte ceny</h2>
-            
-            <div class="availability-form">
-                <div class="date-selection">
-                    <div class="date-field">
-                        <label for="arrival"><strong>PRÍCHOD</strong></label>
-                        <input type="date" id="arrival" name="arrival">
-                    </div>
-                    <div class="date-field">
-                        <label for="departure"><strong>ODCHOD</strong></label>
-                        <input type="date" id="departure" name="departure">
-                    </div>
-                </div>
-        <!--CHATGPT could you create a dropdown menu for number of hostia? Have it go from 1 to 5+-->
-                <div class="guests-selection">
-                    <label for="guests"><strong>HOSTIA</strong></label>
-                    <select id="guests" name="guests">
-                        <option value="1">1 hosť</option>
-                        <option value="2">2 hostia</option>
-                        <option value="3">3 hostia</option>
-                        <option value="4">4 hostia</option>
-                        <option value="5">5+ hostí</option>
-                    </select>
-                </div>
-        
-                <button type="submit">Skontrolovať dostupnosť</button>
-            </div>
-        
-        </div> </div>
         </div>
-        <!--CHATGPTI want to create a hotel booking widget for my website. It should allow users to select check-in and check-out dates, choose the number of guests from a dropdown, and have a button to check availability. Don't worry about styling it. What would a general html structure look like?-->
+        <div class="div8">        
+            <!--CHATGPTI want to create a hotel booking widget for my website. It should allow users to select check-in and check-out dates, choose the number of guests from a dropdown, and have a button to check availability. Don't worry about styling it. What would a general html structure look like?-->
+            <div class="availability-widget">
+                <h2>Pridajte dátumy a uvidíte ceny</h2>
+        
+                <div class="availability-form">
+                    <div class="date-selection">
+                        <div class="date-field">
+                            <label for="arrival"><strong>PRÍCHOD</strong></label>
+                            <input type="date" id="arrival" name="arrival">
+                        </div>
+                        <div class="date-field">
+                            <label for="departure"><strong>ODCHOD</strong></label>
+                            <input type="date" id="departure" name="departure">
+                        </div>
+                    </div>
+        
+                    <div class="guests-selection">
+                        <label for="guests"><strong>HOSTIA</strong></label>
+                        <select id="guests" name="guests">
+                            <option value="1">1 hosť</option>
+                            <option value="2">2 hostia</option>
+                            <option value="3">3 hostia</option>
+                            <option value="4">4 hostia</option>
+                            <option value="5">5+ hostí</option>
+                        </select>
+                    </div>
+        
+                    <button type="submit">Skontrolovať dostupnosť</button>
+                </div>
+            </div>
+        </div>
         
         
-    </div>
-</div>
- 
+    </div> 
 <!-- Other Penzion Options Section -->
 <section class="section bg-light">
     <div class="container-for-cards">

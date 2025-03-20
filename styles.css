@@ -99,16 +99,33 @@ nav {
     display: block;
 }
 
+/* Header for grid section */
+.header-container {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff; /* Match your design */
+    font-family: 'Aboreto', cursive; /* Match navigation bar font */
+    font-size: 35px; /* Adjust size if needed */
+    font-weight: bold;
+    color: #522c2c;
+    padding-top:100px;
+}
 
-/* Gallery Section */
+
+
+/* GRID SECTION */
 .parent {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    height: 75vw;
+    height: 50vw;
+    width:85vw;
     border:solid red;
+    margin:0 auto;
+
     }
     .div1 { grid-area: 1 / 1 / 5 / 4; 
     display: flex;
@@ -116,13 +133,14 @@ nav {
     width: 100%; 
     height: 100%; 
     overflow: hidden;
-    border-style:solid; 
-    border-color:#0181CB;
+    /* border-style:solid;  */
+    /* border-color:#0181CB; */
+    padding-right: 10px;
     }
     .div1 img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
         }
     .div2 { grid-area: 1 / 4 / 3 / 5; 
         display: flex;
@@ -130,12 +148,14 @@ nav {
         width: 100%; 
         height: 100%; 
         overflow: hidden;
-        border-style:solid; 
-        border-color:#0181CB;}
+        /* border-style:solid;  */
+        /* border-color:#0181CB; */
+        padding-right:2.5px;
+        padding-bottom:2.5px;}
     .div2 img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
             }
     .div3 { grid-area: 1 / 5 / 3 / 6;
         display: flex;
@@ -143,13 +163,15 @@ nav {
         width: 100%; 
         height: 100%; 
         overflow: hidden;
-        border-style:solid; 
-        border-color:#0181CB; }
+        /* border-style:solid;  */
+        /* border-color:#0181CB; */
+        padding-left:2.5px;
+        padding-bottom:2.5px; }
 
     .div3 img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
                 }
     .div4 { grid-area: 3 / 4 / 5 / 5; 
         display: flex;
@@ -157,12 +179,15 @@ nav {
         width: 100%; 
         height: 100%; 
         overflow: hidden;
-        border-style:solid; 
-        border-color:#0181CB;}
+        padding-top:2.5px;
+        padding-right:2.5px;
+        /* border-style:solid;  */
+        /* border-color:#0181CB; */
+    }
         .div4 img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
                     }
     .div5 { grid-area: 3 / 5 / 5 / 6; 
         display: flex;
@@ -170,12 +195,16 @@ nav {
         width: 100%; 
         height: 100%; 
         overflow: hidden;
-        border-style:solid; 
-        border-color:#0181CB;}
+        padding-top:2.5px;
+        padding-left:2.5px;t
+    
+        /* border-style:solid; 
+        border-color:#0181CB; */
+    }
         .div5 img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
                     }
     .div6 { grid-area: 5 / 1 / 6 / 4; 
         display: flex;
@@ -184,7 +213,8 @@ nav {
         height: 100%; 
         overflow: hidden;
         border-style:solid; 
-        border-color:#0181CB;}
+        border-color:#0181CB;
+        margin-top:0;}
     .div7 { grid-area: 6 / 1 / 7 / 4; 
         display: flex;
         place-items: center;
@@ -193,53 +223,106 @@ nav {
         overflow: hidden;
         border-style:solid; 
         border-color:#0181CB;}
-    .div8 { grid-area: 5 / 4 / 7 / 6;
-        display: flex;
-        place-items: center;
-        width: 100%; 
-        height: 100%; 
-        overflow: hidden;
-        border-style:solid; 
-        border-color:#0181CB; }
-
-/* Main Image */
-
-
-/* REVIEW AND CALENDAR SECTION */
-/* Container for review and for the calendar widget */
-.hodnotenie-container {
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
-    margin-right:330px;
+        .div8 {
+            grid-area: 5 / 4 / 7 / 6; /* Already spanning two rows */
+            display: flex;
+            align-items: stretch; /* Make child elements fill height */
+            justify-content: stretch; /* Make child elements fill width */
+            width: 100%;
+            height: 100%;
+            /* overflow:hidden; */
+        }
+/* Availability Widget */
+.availability-widget {
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: space-between;    
-    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
     border-radius: 15px;
     background: white;
-    flex-wrap: wrap; 
-    align-items: center;
     text-align: center;
-
+    font-family: inherit;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures content stays inside */
+    word-wrap: break-word; /* Ensures text doesn't overflow */
 }
 
-/* REVIEW CONTAINER */
-.review-container {
-    flex: 1;
-    align-self:flex-start;
+
+/* Form Container */
+.availability-form {
+    width: 100%;
+    max-width: 500px; /* Increased width */
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    font-family: Arial, sans-serif;
-    min-width: 300px;
-    border-style:solid;
-    border: 1px solid #f5f5f5;
-    border-radius:10px;
-    padding:10px;
-
+    gap: 20px; /* More spacing */
 }
 
+/* Date Selection Section */
+.date-selection {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Increased spacing */
+}
+
+.date-field {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex: 1;
+}
+
+/* Labels */
+.date-field label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Date Input Fields */
+.date-field input {
+    padding: 15px; /* Bigger padding */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Guest Selection */
+.guests-selection {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+/* Dropdown for Guests */
+.guests-selection select {
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+ 
+        /* button {
+            background: linear-gradient(to right, #d83259, #c2268e);
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        button:hover {
+            background: linear-gradient(to right, #c2268e, #d83259);
+        } */
+        
 .review-badge {
     display: flex;
     align-items: center;
@@ -301,96 +384,13 @@ nav {
     color: #5c0000;
 }
 
-/* AVAILABILITY WIDGET */
-/* CHATGPT how do I fit this widgit in the same container as the review?  */
-.availability-widget {
-    flex: 1; /* Makes it share space with the review container */
-    min-width: 320px; /* Prevents it from getting too small */
-    max-width: 400px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background: #f5f5f5;
-    text-align: center;
-    font-family: inherit;
-}
-
-.availability-widget h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.availability-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-/* CHATGPT what are all the css styles I need to include for styling the calendar widgit? */
-.date-selection {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-}
-
-.date-field {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    flex: 1;
-}
-
-.date-field label {
-    font-size: 12px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.date-field input {
-    padding: 8px;
-    font-size: 14px;
-    border: 1px solid #f5f5f5;
-    border-radius: 5px;
-}
-
-.guests-selection {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
-.guests-selection label {
-    font-size: 12px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.guests-selection select {
-    padding: 8px;
-    font-size: 14px;
-    border: 1px solid #f5f5f5;
-    border-radius: 5px;
-}
-
-button {
-    background-color: #7b4d4d;
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #7b4d4d;
-}
 
 /* Other Penzion Options Section*/
 
 .bg-light {
 	background-color: #f5f5f5;
 }
+
 
 .section-header {
 	text-align: center;
@@ -640,3 +640,33 @@ footer {
 	text-decoration: none;
 	margin: 0 0.5rem;
 }
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.parent > div {
+    opacity: 0; /* Ensures elements start hidden */
+    transform: translateY(20px); /* Moves them slightly down */
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Delayed Animation for Each Grid Item */
+.parent > div:nth-child(1) { animation-delay: 0.2s; }
+.parent > div:nth-child(2) { animation-delay: 0.4s; }
+.parent > div:nth-child(3) { animation-delay: 0.6s; }
+.parent > div:nth-child(4) { animation-delay: 0.8s; }
+.parent > div:nth-child(5) { animation-delay: 1s; }
+.parent > div:nth-child(6) { animation-delay: 1.2s; }
+.parent > div:nth-child(7) { animation-delay: 1.4s; }
+.parent > div:nth-child(8) { animation-delay: 1.6s; }
+
