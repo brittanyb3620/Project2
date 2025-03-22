@@ -104,9 +104,9 @@ nav {
     width: 100%;
     text-align: center;
     padding: 20px;
-    background-color: #fff; /* Match your design */
-    font-family: 'Aboreto', cursive; /* Match navigation bar font */
-    font-size: 35px; /* Adjust size if needed */
+    background-color: #fff; 
+    font-family: 'Aboreto', cursive; 
+    font-size: 35px; 
     font-weight: bold;
     color: #522c2c;
     padding-top:100px;
@@ -196,33 +196,62 @@ nav {
         height: 100%; 
         overflow: hidden;
         padding-top:2.5px;
-        padding-left:2.5px;t
+        padding-left:2.5px;
     
         /* border-style:solid; 
         border-color:#0181CB; */
-    }
+        }
         .div5 img {
             width: 100%;
             height: 100%;
             object-fit: cover;
                     }
-    .div6 { grid-area: 5 / 1 / 6 / 4; 
+        .div6 {
+            grid-area: 5 / 1 / 6 / 4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            border: solid #0181CB;
+            padding: 10px;
+                    }
+
+        /* Styling for the "Zanechaj hodnotenie" link */
+        .rating-button {
+            font-size: 16px;
+            color: #522c2c;
+            text-decoration: underline; 
+            cursor: pointer; 
+            font-family: inherit;
+        }
+        
+        /* Hover effect */
+            .rating-button:hover {
+            text-decoration: none;
+            color: #5c0000;
+        }
+        
+    .div7 {
+        grid-area: 6 / 1 / 7 / 4;
         display: flex;
-        place-items: center;
-        width: 100%; 
-        height: 100%; 
-        overflow: hidden;
-        border-style:solid; 
-        border-color:#0181CB;
-        margin-top:0;}
-    .div7 { grid-area: 6 / 1 / 7 / 4; 
-        display: flex;
-        place-items: center;
-        width: 100%; 
-        height: 100%; 
-        overflow: hidden;
-        border-style:solid; 
-        border-color:#0181CB;}
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        border: solid pink;
+        text-align: center;
+        padding: 10px;
+    }
+    .div7 h2,
+    .div7 p {
+        font-size: 2vw; 
+        max-width: 90%;
+    }
+
+    
         .div8 {
             grid-area: 5 / 4 / 7 / 6; /* Already spanning two rows */
             display: flex;
@@ -232,6 +261,8 @@ nav {
             height: 100%;
             /* overflow:hidden; */
         }
+
+        
 /* Availability Widget */
 .availability-widget {
     width: 100%;
@@ -368,20 +399,6 @@ nav {
 
 .review-count a:hover {
     text-decoration: underline;
-}
-/* Styling for the "Zanechaj hodnotenie" link */
-.rating-button {
-    font-size 16px;
-    color: #522c2c;
-    text-decoration: underline; 
-    cursor: pointer; 
-    font-family: inherit;
-}
-
-/* Hover effect */
-.rating-button:hover {
-    text-decoration: none;
-    color: #5c0000;
 }
 
 
@@ -670,3 +687,60 @@ footer {
 .parent > div:nth-child(7) { animation-delay: 1.4s; }
 .parent > div:nth-child(8) { animation-delay: 1.6s; }
 
+
+/*  Adjusting for smaller screenzs*/
+
+@media (max-width: 768px) {
+    .div6 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 10px;
+        height: auto;
+        box-sizing: border-box;
+    height:auto;
+    align-self: start;    }
+
+    .parent {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "main main"
+        "text text"
+        "img2 img3"
+        "img4 img5"
+        "rating rating"
+        "booking booking";
+      gap: 10px;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
+      height: 100%;
+    }
+  
+    .div1 { grid-area: main; }
+    .div2 { grid-area: img2; }
+    .div3 { grid-area: img3; }
+    .div4 { grid-area: img4; }
+    .div5 { grid-area: img5; }
+    .div6 { grid-area: text; }
+    .div7 { grid-area: rating; }
+    .div8 { grid-area: booking; }
+  
+    .parent > div {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+    }
+  
+    .parent > div img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+  
+  
