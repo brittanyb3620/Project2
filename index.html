@@ -15,34 +15,40 @@
 </head>
 <body>
 
-    <!-- Navigation Bar -->
+
+<!-- Navigation Bar -->
 <header>
     <nav>
-        <div class="nav-container">
-            <div class="logo">
-                <img src="./Heartlogo.png" alt="Logo">
-                <h1>Penzióny na Slovensku</h1>
-            </div>
-            <div class="nav-links">
-                <a href="#">Ubytovanie</a>
-                <a href="#">Reštaurácia</a>
-                <a href="#">Aktivity v okolí</a>
-    
-                <!-- CHATGPT can you create a dropdown hmtl menu for Kontakt? It should include email, phone a socialne siete -->
-<!-- CHATGPT, can you add ARIA roles to this dropdown menu?-->
-                <div class="dropdown" role="menu">
-                    <a href="#" class="nav-link" role="button" aria-haspopup="true" aria-expanded="false">Kontakt</a>
-                    <div class="dropdown-content" role="menu">
-                      <a href="#" role="menuitem">Email</a>
-                      <a href="#" role="menuitem">Mobil</a>
-                      <a href="#" role="menuitem">Sociálne siete</a>
-                    </div>
-                  </div>
-                </div>
-            </div>
+      <div class="nav-container">
+        <div class="logo">
+          <img src="./Heartlogo.png" alt="Logo">
+          <h1>Penzióny na Slovensku</h1>
         </div>
+  <!-- CHATGPT -->
+        <!-- ✅ Hamburger toggle for mobile menu -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="hamburger">☰</label>
+  
+        <div class="nav-links">
+          <a href="#">Ubytovanie</a>
+          <a href="#">Reštaurácia</a>
+          <a href="#">Aktivity v okolí</a>
+  
+          <!-- CHATGPT can you create a dropdown hmtl menu for Kontakt? It should include email, phone a socialne siete -->
+          <!-- CHATGPT, can you add ARIA roles to this dropdown menu? -->
+          <div class="dropdown" role="menu">
+            <a href="#" class="nav-link" role="button" aria-haspopup="true" aria-expanded="false">Kontakt</a>
+            <div class="dropdown-content" role="menu">
+              <a href="#" role="menuitem">Email</a>
+              <a href="#" role="menuitem">Mobil</a>
+              <a href="#" role="menuitem">Sociálne siete</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </nav>
-</header> 
+  </header>
+  
 <!-- Title of This specific penzion -->
 <main>
 
@@ -303,7 +309,6 @@
                         </div>
                     </div>
                 </div>
-    
                 <div class="footer-bottom">
                     <p>©Penziony na Slovensku</p>
                     <div>
@@ -311,13 +316,27 @@
                         <a href="#">Terms of Service</a>
         <!--CHATGPT How do I make my back to top button smooth as well?-->
         <a href="#" class="back-to-top">↑ Hore</a>
+         <!-- toggle button for dark/light mode -->
+         <button id="dark-toggle" class="dark-toggle">🌙 Režim</button>
 
                     </div>
                 </div>
             </div>
         </footer>
-
-
+<!-- CHATGPT How do I add a toggle button for light to dark and not just have it as a media query based on user preferences?  -->
+    <script>
+        const toggle = document.getElementById('dark-toggle');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            // Optional: change icon
+            if (document.body.classList.contains('dark-mode')) {
+                toggle.textContent = '☀️Režim';
+            } else {
+                toggle.textContent = '🌙 Režim';
+            }
+        });
+    </script>
 </body>
 </html>
 

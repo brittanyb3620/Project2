@@ -99,6 +99,23 @@ nav {
     display: block;
 }
 
+/* Hide checkbox */
+.nav-toggle {
+    display: none;
+  }
+  
+  /* Style the hamburger icon */
+  .hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    user-select: none;
+  }
+  
+  /* Mobile styles */
+  
+
 /* Header for grid section */
 .header-container {
     width: 100%;
@@ -671,6 +688,16 @@ footer {
 	text-decoration: none;
 	margin: 0 0.5rem;
 }
+/* Dark/Light Mode Toggle Button */
+.dark-toggle {
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    margin-left: auto; 
+}
 
 
 /* Animations */
@@ -702,6 +729,77 @@ footer {
 .parent > div:nth-child(8) { animation-delay: 1.6s; }
 
 
+
+
+/* Dark mode Toggle */
+/* CHATGPT How do I add a toggle button for light to dark and not just have it as a media query based on user preferences?*/
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+  }
+  
+  /* Make all text white */
+  body.dark-mode,
+  body.dark-mode h1,
+  body.dark-mode h2,
+  body.dark-mode h3,
+  body.dark-mode p,
+  body.dark-mode span,
+  body.dark-mode a,
+  body.dark-mode label,
+  body.dark-mode input,
+  body.dark-mode textarea,
+  body.dark-mode .logo,
+  body.dark-mode .rating-button,
+  body.dark-mode .review-score,
+  body.dark-mode .review-text,
+  body.dark-mode .nav-links a {
+    color: white ;
+  }
+
+  /* Keep existing dark backgrounds */
+  body.dark-mode nav {
+    background-color: #1e1e1e;
+  }
+  
+  body.dark-mode .header-container,
+  body.dark-mode .availability-widget,
+  body.dark-mode #rating-form,
+  body.dark-mode .card,
+  body.dark-mode .section-header,
+  body.dark-mode .footer-bottom,
+  body.dark-mode .footer-container,
+  body.dark-mode footer {
+    background-color: #2A646E;
+  }
+  
+  /* Make all maroon buttons black */
+  body.dark-mode .availability-widget button,
+  body.dark-mode .rating-button,
+  body.dark-mode .dark-toggle {
+    background-color: black;
+    color: white ;
+  }
+  
+  /* Optional: soften hover */
+  body.dark-mode .rating-button:hover,
+  body.dark-mode .availability-widget button:hover {
+    color: #ccc;
+  }
+  
+  body.dark-mode .bnb-cards::-webkit-scrollbar {
+    background-color: transparent;
+  }
+  body.dark-mode form,
+body.dark-mode form * {
+  color: white !important;
+}
+body.dark-mode select {
+    background-color: black !important;
+    color: white !important;
+  }
+
+  
 /*  Adjusting for smaller screenzs*/
 
 @media (max-width: 768px) {
@@ -762,3 +860,25 @@ footer {
   }
   
 
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+      background-color: #522c2c;
+      padding: 1rem;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+    }
+  
+    .nav-toggle:checked + .hamburger + .nav-links {
+      display: flex;
+    }
+  }
+  
