@@ -16,6 +16,7 @@
 <body>
 
     <!-- Navigation Bar -->
+<header>
     <nav>
         <div class="nav-container">
             <div class="logo">
@@ -28,19 +29,23 @@
                 <a href="#">Aktivity v okolí</a>
     
                 <!-- CHATGPT can you create a dropdown hmtl menu for Kontakt? It should include email, phone a socialne siete -->
-                <div class="dropdown">
-                    <a href="#" class="nav-link">Kontakt</a>
-                    <div class="dropdown-content">
-                        <a href="">Email</a>
-                        <a href="">Mobil</a>
-                        <a href="#">Sociálne siete</a>
+<!-- CHATGPT, can you add ARIA roles to this dropdown menu?-->
+                <div class="dropdown" role="menu">
+                    <a href="#" class="nav-link" role="button" aria-haspopup="true" aria-expanded="false">Kontakt</a>
+                    <div class="dropdown-content" role="menu">
+                      <a href="#" role="menuitem">Email</a>
+                      <a href="#" role="menuitem">Mobil</a>
+                      <a href="#" role="menuitem">Sociálne siete</a>
                     </div>
+                  </div>
                 </div>
             </div>
         </div>
     </nav>
-    
+</header> 
 <!-- Title of This specific penzion -->
+<main>
+
 <div class="header-container">
     <h1>Penzión Pod Mývalom</h1>
 </div>
@@ -226,8 +231,8 @@
 <!--Input Form section-->
 <section id="review-section">
     <!--CHATGPT can you create a layout for a form in html? It needs 5 inputs-->
-    <form id="rating-form">
-        <h2>Ohodnoť svoje ubytovanie</h2>
+    <form id="rating-form" role="form" aria-labelledby="rating-form-title">
+        <h2 id="rating-form-title">Ohodnoť svoje ubytovanie</h2>
         <!-- Star Rating -->
         <label for="penzion">Vyber penzión, v ktorom si býval:</label>
         <select id="penzion" name="penzion">
@@ -264,7 +269,7 @@
         <button type="submit">Odoslať recenziu</button>
     </form>
 </section>
-
+</main>
  <!-- Footer -->
     <footer>
             <div class="container">

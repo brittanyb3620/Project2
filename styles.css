@@ -218,21 +218,34 @@ nav {
             padding: 10px;
             
                     }     
+/* Zanechaj hodnotenie!!! */
+    .rating-button {
+        position: relative;
+        font-size: 17px;
+        color: #522c2c;
+        text-decoration: none;
+        cursor: pointer;
+                    }
+                    
 
-        /* Styling for the "Zanechaj hodnotenie" link */
-        .rating-button {
-            font-size: 16px;
-            color: #522c2c;
-            text-decoration: underline; 
-            cursor: pointer; 
-            font-family: inherit;
-        }
-        
-        /* Hover effect */
-            .rating-button:hover {
-            text-decoration: none;
-            color: #5c0000;
-        }
+    .rating-button::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #5c0000;
+        transition: width 0.3s ease-in-out;
+                    }
+                    
+    
+    .rating-button:hover::after {
+        width: 100%;
+                    }
+    .rating-button:hover {
+        color: #5c0000;
+                    }
         
     .div7 {
         grid-area: 6 / 1 / 7 / 4;
@@ -740,12 +753,12 @@ footer {
   
     .parent > div img {
         width: 100%;
-        height: auto;         /* ✅ Let images shrink naturally */
-        max-height: 250px;    /* ✅ Prevent images from growing too tall */
+        height: auto;       
+        max-height: 250px;   
         object-fit: cover;
         display: block;
       }
       
   }
   
-  
+
